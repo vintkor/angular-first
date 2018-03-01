@@ -1,6 +1,14 @@
-<div class="col col-md-4">
-
-
-  <h4>{{ getName() }}</h4>
-  <h5>{{ carYear }}</h5>
+<div class="col m4">
+  <div class="card">
+    <div class="card-image">
+      <img src='{{ car.carImage }}'>
+      <span class="card-title">{{ car.carName }}</span>
+    </div>
+    <div class="card-content">
+      <p>{{ car.carDescription }}</p>
+    </div>
+    <div class="card-action">
+      <a href="#" class="btn waves-effect waves-light red">{{ car.carYear }}</a>
+    </div>
+  </div>
 </div>
