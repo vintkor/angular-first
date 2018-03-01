@@ -26,14 +26,17 @@ export class CarsComponent {
       carDescription: 'I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.',
       carImage: 'https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/cars-car/image/2015/01/buyers_guide_-_ford_mondeo_2014_-_front_quarter.jpg?itok=ejrh2ffE'
     }
-  ]
+  ];
 
-  canAddCar: boolean = false;
+  isMessage: boolean = false;
+  inputText: string;
 
-  constructor(){
-    setInterval(() => {
-        this.canAddCar = !this.canAddCar;
-      }, 2000)
+  setInputText(value){
+    this.inputText = value;
+  }
+
+  toggleMessage(){
+    this.isMessage = !this.isMessage;
   }
 
 }

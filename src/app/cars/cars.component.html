@@ -1,6 +1,11 @@
 <div class="row">
   <div class="col m12">
-    <button [disabled]="canAddCar" class="btn btn-primary">Add car</button>
+    <button class="btn green waves-effect waves-light" (click)="toggleMessage()">Add car</button>
+    <p class="card-panel blue lighten-3 text-lighten-3" *ngIf="isMessage">Car was added success!</p>
+  </div>
+  <div class="col m12">
+    <input type="text" #myInp (input)="setInputText(myInp.value)">
+    <p>{{ inputText }}</p>
   </div>
   <div class="app-car" *ngFor="let car of cars" [car]="car"></div>
 </div>

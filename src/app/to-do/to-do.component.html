@@ -1,0 +1,19 @@
+<div class="col m12">
+  <ul class="collection with-header">
+    <li class="collection-header"><h4>My To-Do list</h4></li>
+    <li class="collection-item" *ngFor="let task of tasks">
+      {{ task.message }}
+      <a class="secondary-content" (click)="deleteTask(task)" style="cursor: pointer;">
+        <i class="material-icons">delete</i>
+      </a>
+    </li>
+  </ul>
+  <div class="row">
+    <div class="input-field col m12">
+      <input placeholder="send task and press Enter" id="first_name" type="text" class="validate"
+             (keyup.enter)="addTask($event)"
+      >
+      <label for="first_name">First Name</label>
+    </div>
+  </div>
+</div>
